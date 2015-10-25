@@ -1,0 +1,34 @@
+<%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+        <% @video.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.select 'producer_id',
+      options_from_collection_for_select(@producers, 'id', 'full_name', selected: @producer )
+    %>
+  </div>
+  <% @actors.each do |actor| %>
+    <%= check_box_tag 'actors[]', actor.id, @video.actors.include?(actor) %>
+    <%= f.label actor, actor.full_name %><br>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

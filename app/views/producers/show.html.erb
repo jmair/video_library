@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @producer.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @producer.last %>
+</p>
+
+<%= link_to 'Edit', edit_producer_path(@producer) %> |
+<%= link_to 'Back', producers_path %>
