@@ -1,6 +1,6 @@
 == Video Library Readme
 
-* Ruby version 2.2.1p85
+* Ruby version 2.2.3p173
 
 * System dependencies
   * Mysql
@@ -14,3 +14,9 @@ rake setup
 
 * How to run the test suite
 rspec
+
+* ToDo List
+
+Add login capability to prevent tampering of data.
+Write more extensive tests covering all controllers and models.
+Incorporate Capybara with Selenium to automate front-end testing.
