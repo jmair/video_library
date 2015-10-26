@@ -5,7 +5,7 @@ class VideosController < ApplicationController
 
   def index
     if params[:title_filter]
-      @videos = Video.where("title LIKE ? ", "#{params[:title_filter]}")
+      @videos = Video.where("title LIKE ? ", "%#{params[:title_filter]}%")
     else
       @videos = Video.all
     end
