@@ -1,28 +1,20 @@
-== README
+== Video Library Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+These are the steps to get this application up and running:
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version 2.2.1p85
 
 * System dependencies
+  * Ruby 2.2.1p85
+  * Mysql
+  * Rails 4.2.4
 
 * Configuration
+  After downloading and unzipping the files and installing the Bundler gem
+  cd into the directory and run bundle install.
 
-* Database creation
-
-* Database initialization
+* Database creation and initialization
+  rake setup
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  rspec
