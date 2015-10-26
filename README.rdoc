@@ -1,11 +1,8 @@
 == Video Library Readme
 
-These are the steps to get this application up and running:
-
 * Ruby version 2.2.1p85
 
 * System dependencies
-  * Ruby 2.2.1p85
   * Mysql
   * Rails 4.2.4
 
