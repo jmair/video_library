@@ -4,7 +4,11 @@ class VideosController < ApplicationController
   before_action :set_actors, only: [:new, :edit]
 
   def index
-    @videos = Video.all
+    if params[:title_filter]
+      @videos = Video.where("title LIKE ? ", "#{params[:title_filter]}")
+    else
+      @videos = Video.all
+    end
   end
 
   def show
