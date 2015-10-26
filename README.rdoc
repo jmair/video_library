@@ -7,16 +7,16 @@
   * Rails 4.2.4
 
 * Configuration
-After downloading and unzipping the files and installing the Bundler gem cd into the directory and run bundle install.
+  * After downloading and unzipping the files and installing the Bundler gem cd into the directory and run bundle install.
 
 * Database creation and initialization
-rake setup
+  * rake setup
 
 * How to run the test suite
-rspec
+  * rspec
 
 * ToDo List
 
-Add login capability to prevent tampering of data.
-Write more extensive tests covering all controllers and models.
-Incorporate Capybara with Selenium to automate front-end testing.
+  * Add login capability to prevent tampering of data.
+  * Write more extensive tests covering all controllers and models.
+  * Incorporate Capybara with Selenium to automate front-end testing.
