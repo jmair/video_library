@@ -42,6 +42,7 @@ class ActorsController < ApplicationController
   end
 
   def destroy
+    @actor.performances.delete_all
     @actor.destroy
     respond_to do |format|
       format.html { redirect_to actors_url, notice: 'Actor was successfully destroyed.' }

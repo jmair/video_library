@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Videos</h1>
+<h1>Videos</h1>
 
-<table>
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
       <th>Producer</th>
+      <th>Actors</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,16 +19,15 @@
         <td><%= video.title %></td>
         <td><%= video.description %></td>
         <td><%= video.producer.full_name %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% video.actors.each do |actor| %>
+          <%= actor.full_name %><br>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', video, class: 'btn-xs btn-info' %>
+        <%= link_to 'Edit', edit_video_path(video), class: 'btn-xs btn-warning' %>
+        <%= link_to 'Destroy', video, class: 'btn-xs btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Video', new_video_path %>
-<%= link_to 'New Producer', new_producer_path %>
-<%= link_to 'New Actor', new_actor_path %>

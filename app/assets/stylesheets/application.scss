@@ -13,3 +13,32 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.form-control {
+  margin-bottom: 12px;
+}
+
+.table td:last-child {
+  width: 150px;
+}
+
+.btn {
+  margin-bottom: 8px;
+}
+
+.navbar {
+  .form-control {
+    margin-bottom: 0;
+  }
+  button.btn {
+    margin-bottom: 0;
+  }
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+select.form-control {
+  margin-bottom: 12px;
+}
